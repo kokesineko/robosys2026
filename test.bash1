@@ -1,0 +1,12 @@
+#!/bin/bash
+ng () {                        # 関数ngの定義
+        echo ${1}行目のテスト失敗 # $1はngの1番目の引数
+        res=1
+}
+
+res=0
+a=鈴木
+[ "$a" = 鈴本 ] || ng "$LINENO"
+[ "$a" = 鈴木 ] || ng "$LINENO"
+
+exit $res
