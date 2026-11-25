@@ -5,18 +5,18 @@
 import sys
 
 income = 0
-expose = 0
+expense = 0
 
 for line in sys.stdin:
-  value = float(line.rstrip)
+  value = float(line.rstrip())
 
   if value >= 0:
     income += value
   else:
-    expose += abs(value)
+    expense += abs(value)
 
   balance = income - expense
 
 print(f"収入合計: {income}")
-print(f"支出合計: {expose}")
-print(f"残高: {income}")
+print(f"支出合計: {expense}")
+print(f"残高: {balance}")
