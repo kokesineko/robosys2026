@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Utaka Mantani
+# SPDX-License-Identifire: BSD-3-Clause
+
+import sys
+
+income = 0
+expose = 0
+
+for line in sys.stdin:
+  value = float(line.rstrip)
+
+  if value >= 0:
+    income += value
+  else:
+    expose += abs(value)
+
+  balance = income - expense
+
+print(f"収入合計: {income}")
+print(f"支出合計: {expose}")
+print(f"残高: {income}")
