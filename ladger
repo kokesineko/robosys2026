@@ -17,6 +17,9 @@ for line in sys.stdin:
 
   balance = income - expense
 
+
 print(f"収入合計: {income}")
 print(f"支出合計: {expense}")
 print(f"残高: {balance}")
+if balance <= 0:
+  print(f"残高がありません")
